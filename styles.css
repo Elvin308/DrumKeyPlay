@@ -1,0 +1,26 @@
+h1{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+.drum-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.drum-button{
+    flex: 0 0 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
