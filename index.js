@@ -11,6 +11,7 @@ document.addEventListener("keydown", (e) => playSound(e.key));
 
 //Function that plays sound based on the key/letter passed in
 function playSound(letter){
+    buttonFlashAnimation(letter);
     letter = letter.toUpperCase();
     switch(letter){
         case "K":
@@ -37,4 +38,12 @@ function playSound(letter){
         default:
             console.log(letter + "Not implemented for sound");
     }
+}
+
+//Add flash animation to button when pressed/keydown
+function buttonFlashAnimation(letter){
+    document.querySelector("#" + letter.toLowerCase() + ".drum-button").classList.add("flash");
+    setTimeout(() => {
+        document.querySelector("#" + letter.toLowerCase() + ".drum-button").classList.remove("flash")
+    }, 500);
 }
