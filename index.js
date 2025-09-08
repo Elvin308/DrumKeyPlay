@@ -1,26 +1,18 @@
 //Add event listener for all the drum buttons
-//Play sound for each button when clicked
-document.querySelectorAll(".drum-button").forEach((button, index) =>{
+document.querySelectorAll(".drum-button").forEach(button =>{
     button.addEventListener("click", () => {
-        switch(button.innerHTML){
-            case "K":
-                new Audio("sounds/crash.mp3").play();
-                break;
-            case "L":
-                new Audio("sounds/kick-bass.mp3").play();
-                break;
-            case "J":
-                new Audio("sounds/snare.mp3").play();
-                break;
-            default:
-                new Audio("sounds/tom-" +(index + 1)+ ".mp3").play();
-        }
+        playSound(button.innerText);
     });
 });
 
 //Add event listener for keyboard down
-document.addEventListener("keydown", (event) => {
-    switch(event.key.toUpperCase()){
+document.addEventListener("keydown", (e) => playSound(e.key));
+
+
+//Function that plays sound based on the key/letter passed in
+function playSound(letter){
+    letter = letter.toUpperCase();
+    switch(letter){
         case "K":
             new Audio("sounds/crash.mp3").play();
             break;
@@ -43,6 +35,6 @@ document.addEventListener("keydown", (event) => {
             new Audio("sounds/tom-4.mp3").play();
             break;
         default:
-            console.log(event.key + "Not implemented for sound");
+            console.log(letter + "Not implemented for sound");
     }
-});
+}
