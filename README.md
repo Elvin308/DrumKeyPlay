@@ -19,7 +19,7 @@ A simple interactive web page where each button represents an instrument. When c
 ## ⚡ How to Run  
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/your-username/instrument-buttons.git
+   git clone https://github.com/Elvin308/DrumKeyPlay.git
 2. Open index.html in your browser.
 3. Start clicking buttons and enjoy the sounds 🎶
 
